@@ -1,0 +1,40 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+dofile ./scripts/directives.tcl
+options set Output/OutputVHDL false
+false
+options set Output/RTLSchem false
+false
+options set Input/TargetPlatform x86_64
+x86_64
+solution options set /Flows/SCVerify/USE_CCS_BLOCK true
+true
+flow package option set /SCVerify/USE_NCSIM true
+true
+flow package option set /SCVerify/USE_VCS true
+true
+flow package require /SCVerify
+10.4
+solution file add src/fir.cpp -type C++
+/INPUTFILES/1
+solution file add src/fir.h -type C++ -exclude true
+/INPUTFILES/2
+solution file add src/types.h -type C++ -exclude true
+/INPUTFILES/3
+solution file add src/main.cpp -type C++ -exclude true
+/INPUTFILES/4
+solution design set fir -top
+solution design set fir -top (HC-8)
+go new
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Creating project directory '/home/ajh9498/Documents/SALSA/FIR_COMPLEX/Catapult_16_complex_float/'. (PRJ-1)
+Moving session transcript to file "/home/ajh9498/Documents/SALSA/FIR_COMPLEX/catapult.log"
+Front End called with arguments: -- /home/ajh9498/Documents/SALSA/FIR_COMPLEX/src/fir.cpp (CIN-69)
+Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 4.17 seconds, memory usage 1309500kB, peak memory usage 1309500kB (SOL-9)
