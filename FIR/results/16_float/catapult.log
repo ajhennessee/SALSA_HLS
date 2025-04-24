@@ -1,0 +1,27 @@
+//  Catapult Ultra Synthesis 2023.1_2/1049935 (Production Release) Sat Jun 10 10:53:51 PDT 2023
+//  
+//          Copyright (c) Siemens EDA, 1996-2023, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux ajh9498@hansolo.poly.edu 4.18.0-553.33.1.el8_10.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v26.1_2.0, HLS_PKGS v26.1_2.0, 
+//                       SIF_TOOLKITS v26.1_2.0, SIF_XILINX v26.1_2.0, 
+//                       SIF_ALTERA v26.1_2.0, CCS_LIBS v26.1_2.0, 
+//                       CDS_PPRO v2022.1_1, CDS_DesigChecker v2023.1_1, 
+//                       CDS_OASYS v21.1_3.1, CDS_PSR v22.2_0.9, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Thu Apr 24 16:37:52 2025
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log179863e4292ea7.0"
+project load /home/ajh9498/Documents/SALSA_HLS/FIR/results/16_float/Catapult_16_float.ccs
+# Creating project directory '/home/ajh9498/Documents/SALSA_HLS/FIR/results/16_float/Catapult_16_float/'. (PRJ-1)
+# Moving session transcript to file "/home/ajh9498/Documents/SALSA_HLS/FIR/results/16_float/catapult.log"
+# Reading solution library '/home/ajh9498/Documents/SALSA_HLS/FIR/results/16_float/Catapult_16_float/td_ccore_solutions/leading_sign_13_1_1_0_fbd6b6484e0226fdfa7c7e6838ce99f45fe9_0/.sif/solIndex_2_8ca97abc-c338-4d67-a14a-852c152e76c5.xml' ... (LIB-129)
+# Reading solution library '/home/ajh9498/Documents/SALSA_HLS/FIR/results/16_float/Catapult_16_float/td_ccore_solutions/leading_sign_18_1_1_0_7b2153b3b691fe1ab68d43c72c494a7b6845_0/.sif/solIndex_2_40ef5a85-12b9-46ca-b502-a7553bd3a184.xml' ... (LIB-129)
+quit
+# Saving project file '/home/ajh9498/Documents/SALSA_HLS/FIR/results/16_float/Catapult_16_float.ccs'. (PRJ-5)
+// Finish time Thu Apr 24 16:38:31 2025, time elapsed 0:39, peak memory 1.50GB, exit status 0
