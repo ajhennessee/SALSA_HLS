@@ -11,7 +11,7 @@ typedef TYPE_T type_t;
 #define NUM_TAPS 16
 #endif
 
-type_t fir(type_t input, type_t taps[NUM_TAPS]);
+type_t CCS_BLOCK(fir)(type_t input, type_t taps[NUM_TAPS]);
 
 #define NUM_SAMPLES 16
 
