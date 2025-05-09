@@ -6,8 +6,8 @@ void CCS_BLOCK(outer_product)(type_t A[M], type_t B[N], type_t C[M][N]) {
         
         VEC_B: for (int j = 0; j < N; j++) {
             
-            C[i][j] = A[i]* B[j];
-
+            C[i][j] = A[i] * B[j];
+            
         }
     }
 }
