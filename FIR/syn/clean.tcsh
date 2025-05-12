@@ -3,3 +3,5 @@ rm -f setup/*.log
 rm -f setup/default.svf
 rm -rf setup/TOP.dlib
 rm -f setup/work/*
+rm -rf setup/.solutions
+rm -f setup/.synopsys_dc.setup
