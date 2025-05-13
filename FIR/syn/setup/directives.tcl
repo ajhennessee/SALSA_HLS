@@ -7,3 +7,4 @@ source fir_core.con
 compile_ultra
 report_area
 report_power
+exit

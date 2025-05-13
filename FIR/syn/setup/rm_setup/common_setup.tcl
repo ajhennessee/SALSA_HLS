@@ -3,7 +3,7 @@
 ##########################################################################################
 
 set ADDITIONAL_SEARCH_PATH   "../ref/DBs ../ref/CLIBs ../ref/tech  ./rtl ./sdc" ;#  Directories containing logic libraries,
-                                                                                        #  logic design and script files.
+                                                                                    #  logic design and script files.
 
 set TARGET_LIBRARY_FILES     "saed32lvt_ss0p75v125c.db"                             ;#  Logic cell library files
 
