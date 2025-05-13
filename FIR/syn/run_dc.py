@@ -7,9 +7,9 @@ top = "fir"
 directives_script = "directives.tcl"
 clean_script = "./clean.tcsh"
 
-results_dir = "../../results"
-rtl_dir = "rtl"
-logs_dir = "../logs"
+results_dir = "../results"
+rtl_dir = "setup/rtl"
+logs_dir = "logs"
 
 taps_list = [16, 32, 64]
 types_list = ["float", "complex_float"]
@@ -37,6 +37,6 @@ for taps in taps_list:
             print(f"Running DC for FIR design with {taps} taps and {data_type} data type...")
             
             with open(log_path, "w") as log_file:
-                subprocess.run(["dcnxt_shell", "-topo", "-f", directives_script], stdout=log_file, stderr=subprocess.STDOUT)
+                subprocess.run(["dcnxt_shell", "-topo", "-f", directives_script], cwd="setup", stdout=log_file, stderr=subprocess.STDOUT)
             
-            subprocess.run(clean_script, cwd="..", shell=True)
+            subprocess.run(clean_script, shell=True)
