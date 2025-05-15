@@ -1,0 +1,2130 @@
+
+                            Design Compiler (R) NXT 
+
+              Version T-2022.03-SP5-5 for linux64 - Jun 13, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Starting shell in Topographical mode...
+Initializing gui preferences from file  /home/ajh9498/.synopsys_dc_gui/preferences.tcl
+source setup.tcl
+Information: Loading technology file '/home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/tech/saed32nm_1p9m.tf' (FILE-007)
+Warning: Technology used to create frame-view and current technology have inconsistency: Fat table contents are different. (FRAM-054)
+Warning: Technology 'saed32nm_1p9m_mw.tf' used for frame-view creation in library 'saed32_lvt|saed32_lvt_std', is inconsistent with the current technology 'saed32nm_1p9m.tf' of library 'fir_core.dlib'. Please run derive_design_level_via_regions to generate up-do-date via region in the design library. (NDM-102)
+Warning: Technology used to create frame-view and current technology have inconsistency: Fat table contents are different. (FRAM-054)
+Warning: Technology 'saed32nm_1p9m_mw.tf' used for frame-view creation in library 'saed32_lvt|saed32_lvt_lsup', is inconsistent with the current technology 'saed32nm_1p9m.tf' of library 'fir_core.dlib'. Please run derive_design_level_via_regions to generate up-do-date via region in the design library. (NDM-102)
+Warning: Technology used to create frame-view and current technology have inconsistency: Fat table contents are different. (FRAM-054)
+Warning: Technology 'saed32nm_1p9m_mw.tf' used for frame-view creation in library 'saed32_lvt|saed32_lvt_lsdn', is inconsistent with the current technology 'saed32nm_1p9m.tf' of library 'fir_core.dlib'. Please run derive_design_level_via_regions to generate up-do-date via region in the design library. (NDM-102)
+Warning: Technology used to create frame-view and current technology have inconsistency: Fat table contents are different. (FRAM-054)
+Warning: Technology 'saed32nm_1p9m_mw.tf' used for frame-view creation in library 'saed32_lvt|saed32_lvt_pg', is inconsistent with the current technology 'saed32nm_1p9m.tf' of library 'fir_core.dlib'. Please run derive_design_level_via_regions to generate up-do-date via region in the design library. (NDM-102)
+Information: Using technology 'saed32nm_1p9m.tf' to derive design library via region in the frame-views of library 'saed32_lvt|saed32_lvt_std'. (FRAM-088)
+Warning: There is no via region created in block 'AND2X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AND2X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AND2X4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AND3X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AND3X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AND3X4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AND4X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AND4X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AND4X4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ANTENNA_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AO222X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AOBUFX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AOBUFX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AOBUFX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AOINVX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AOINVX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'AOINVX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'BSLEX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'BSLEX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'BSLEX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'BUSKP_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'CLOAD1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'DEC24X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'DEC24X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'DELLN1X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'DELLN2X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'DELLN3X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FADDX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FADDX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HADDX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HADDX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'IBUFFX16_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'IBUFFX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'IBUFFX32_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'IBUFFX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'IBUFFX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'INVX0_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'INVX16_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'INVX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'INVX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'INVX32_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'INVX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'INVX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLANDAOX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLANDAOX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLANDAOX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLANDAOX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLANDX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLANDX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLANDX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLANDX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLORAOX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLORAOX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLORAOX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLORAOX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLORX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLORX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLORX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'ISOLORX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LNANDX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LNANDX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NAND2X0_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NAND2X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NAND2X4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NAND3X0_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NAND3X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NAND3X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NAND3X4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NAND4X0_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NAND4X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NBUFFX16_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NBUFFX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NBUFFX32_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NBUFFX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NBUFFX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NMT1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NMT2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'NMT3_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OA21X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OA21X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OA221X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OA221X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OA222X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OA222X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OA22X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OA22X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OAI21X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OAI21X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OAI221X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OAI221X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OAI222X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OAI222X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OAI22X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OAI22X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OR4X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'OR4X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'PGX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'PGX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'PGX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'PMT1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'PMT2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'PMT3_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'TIEH_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'TIEL_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'TNBUFFX16_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'TNBUFFX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'TNBUFFX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'TNBUFFX32_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'TNBUFFX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'TNBUFFX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'XNOR2X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'XNOR2X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'XOR2X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'XOR2X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'XOR3X1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'XOR3X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Via regions for library saed32_lvt|saed32_lvt_std created successfully
+Information: Using technology 'saed32nm_1p9m.tf' to derive design library via region in the frame-views of library 'saed32_lvt|saed32_lvt_lsup'. (FRAM-088)
+Warning: There is no via region created in block 'LSUPX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSUPX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSUPX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSUPX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Via regions for library saed32_lvt|saed32_lvt_lsup created successfully
+Information: Using technology 'saed32nm_1p9m.tf' to derive design library via region in the frame-views of library 'saed32_lvt|saed32_lvt_lsdn'. (FRAM-088)
+Warning: There is no via region created in block 'LSDNENCLSSX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNENCLSSX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNENCLSSX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNENCLSSX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNENSSX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNENSSX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNSSX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNSSX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNSSX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNSSX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNX1_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'LSDNX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Via regions for library saed32_lvt|saed32_lvt_lsdn created successfully
+Information: Using technology 'saed32nm_1p9m.tf' to derive design library via region in the frame-views of library 'saed32_lvt|saed32_lvt_pg'. (FRAM-088)
+Warning: There is no via region created in block 'FOOT2X16_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FOOT2X32_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FOOT2X4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FOOT2X8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FOOTX16_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FOOTX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FOOTX32_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FOOTX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'FOOTX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HEAD2X16_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HEAD2X2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HEAD2X32_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HEAD2X8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HEADX16_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HEADX2_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HEADX32_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HEADX4_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Warning: There is no via region created in block 'HEADX8_LVT.frame'. Please check your design and settings.  (FRAM-069)
+Via regions for library saed32_lvt|saed32_lvt_pg created successfully
+Saving library 'fir_core.dlib'
+Information: Using the 'create_lib' command has enabled NDM mode for the current Design Compiler NXT session. (DCT-294)
+Information: Incrementing open_count of library 'fir_core.dlib' to 2. (LIB-017)
+
+==================================================================
+
+Library Settings:
+search_path:              . /eda/synopsys/syn/T-2022.03-SP5-5/libraries/syn /eda/synopsys/syn/T-2022.03-SP5-5/dw/syn_ver /eda/synopsys/syn/T-2022.03-SP5-5/dw/sim_ver ../ref/DBs ../ref/CLIBs ../ref/tech  ./rtl ./sdc
+link_library:             * saed32lvt_ss0p75v125c.db
+target_library:           saed32lvt_ss0p75v125c.db
+physical libraries:       saed32_lvt.ndm
+physical design library:  fir_core.dlib
+
+==================================================================
+analyze -f verilog fir_core.v
+Running PRESTO HDLC
+Compiling source file ./rtl/fir_core.v
+Presto compilation completed successfully.
+Loading db file '/home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/DBs/saed32lvt_ss0p75v125c.db'
+1
+elaborate fir_core
+Loading db file '/eda/synopsys/syn/T-2022.03-SP5-5/libraries/syn/gtech.db'
+Loading db file '/eda/synopsys/syn/T-2022.03-SP5-5/libraries/syn/standard.sldb'
+  Loading link library 'saed32lvt_ss0p75v125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./rtl/fir_core.v:3988: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:3990: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:3992: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:3994: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:3996: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:3998: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4000: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4002: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4004: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4006: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4008: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4010: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4012: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4014: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4016: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4018: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4658: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4660: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4662: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4664: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4666: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4668: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4670: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4672: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4674: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4676: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4678: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4680: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4682: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:4684: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 2836 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           8570           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 2839 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           8646           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 3977 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           8589           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4025 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           8665           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4032 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           8608           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4436 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           8703           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 4628 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           8684           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 6166 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           8627           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 6831 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           8722           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine fir_core line 5166 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================
+|                        Register Name                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_1_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5174 in file
+		'./rtl/fir_core.v'.
+========================================================================================================================
+|                        Register Name                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_10_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+========================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5182 in file
+		'./rtl/fir_core.v'.
+========================================================================================================================
+|                        Register Name                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_11_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+========================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5190 in file
+		'./rtl/fir_core.v'.
+========================================================================================================================
+|                        Register Name                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_12_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+========================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5198 in file
+		'./rtl/fir_core.v'.
+========================================================================================================================
+|                        Register Name                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_13_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+========================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5206 in file
+		'./rtl/fir_core.v'.
+========================================================================================================================
+|                        Register Name                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_14_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+========================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5214 in file
+		'./rtl/fir_core.v'.
+========================================================================================================================
+|                        Register Name                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_15_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+========================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5222 in file
+		'./rtl/fir_core.v'.
+=====================================================================================================================
+|                       Register Name                       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5230 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================
+|                        Register Name                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_2_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5238 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================
+|                        Register Name                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_4_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5246 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================
+|                        Register Name                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_5_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5254 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================
+|                        Register Name                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_6_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5262 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================
+|                        Register Name                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_7_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5270 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================
+|                        Register Name                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_8_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5278 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================
+|                        Register Name                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_9_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5286 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================
+|                        Register Name                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================
+| ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_r_m_3_sva_reg | Flip-flop |  22   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5294 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| return_e_rsci_idat_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5304 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| return_m_rsci_idat_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5315 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================================================================
+|                                                                 Register Name                                                                  |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================================================================
+| MAC_16_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5325 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================================================================
+|                                                                 Register Name                                                                  |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================================================================
+| MAC_15_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5335 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================================================================
+|                                                                 Register Name                                                                  |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================================================================
+| MAC_14_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5345 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================================================================
+|                                                                 Register Name                                                                  |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================================================================
+| MAC_11_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| MAC_13_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| MAC_12_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5370 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================================================================
+|                                                                 Register Name                                                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================================================================
+| MAC_9_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5380 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================================================================
+|                                                                 Register Name                                                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================================================================
+| MAC_8_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5390 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================================================================
+|                                                                 Register Name                                                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================================================================
+| MAC_7_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5400 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================================================================
+|                                                                 Register Name                                                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================================================================
+| MAC_6_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5410 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================================================================
+|                                                                 Register Name                                                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================================================================
+| MAC_5_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5420 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================================================================
+|                                                                 Register Name                                                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================================================================
+| MAC_4_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5430 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================================================================
+|                                                                 Register Name                                                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================================================================
+| MAC_3_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5440 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================================================================
+|                                                                 Register Name                                                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================================================================
+| MAC_2_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5450 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================================================================
+|                                                                 Register Name                                                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================================================================
+| MAC_1_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nor_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5460 in file
+		'./rtl/fir_core.v'.
+=============================================================================================================================================================
+|                                           Register Name                                           |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================================================================================
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_14_lpi_1_dfm_5_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_15_lpi_1_dfm_5_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_lpi_1_dfm_6_5_reg           | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|        ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_l_mux_10_itm_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_4_sva_2_1_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|        ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_l_mux_13_itm_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_5_sva_2_1_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_6_sva_2_1_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_7_sva_2_1_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|        ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_l_mux_22_itm_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_8_sva_2_1_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|        ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_l_mux_25_itm_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_9_sva_2_1_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_15_lpi_1_dfm_6_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|            MAC_2_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_4_0_rsp_0_reg            | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|            MAC_2_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_4_0_rsp_1_reg            | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|               MAC_16_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_5_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_16_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                 | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|               MAC_15_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_5_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_15_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                 | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|               MAC_14_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_5_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_14_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                 | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|               MAC_13_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_5_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_13_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                 | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|               MAC_12_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_5_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_12_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                 | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_11_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                 | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_10_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                 | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_9_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_8_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_7_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_6_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_5_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_4_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                MAC_3_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_5_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_3_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                MAC_2_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_5_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_2_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                MAC_1_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_5_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 MAC_1_r_ac_float_else_r_ac_float_else_r_ac_float_else_or_itm_reg                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                                reg_return_e_triosy_obj_ld_cse_reg                                 | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                                 reg_taps_e_triosy_obj_ld_cse_reg                                  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_15_mantissa_reg                          | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_14_mantissa_reg                          | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_13_mantissa_reg                          | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_12_mantissa_reg                          | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_11_mantissa_reg                          | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_10_mantissa_reg                          | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_9_mantissa_reg                           | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_8_mantissa_reg                           | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_7_mantissa_reg                           | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_6_mantissa_reg                           | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_5_mantissa_reg                           | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_4_mantissa_reg                           | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_3_mantissa_reg                           | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_2_mantissa_reg                           | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                          MAC_1_leading_sign_18_1_1_0_cmp_1_mantissa_reg                           | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|                           MAC_1_leading_sign_18_1_1_0_cmp_mantissa_reg                            | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_10_lpi_1_dfm_6_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_10_lpi_1_dfm_5_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_11_lpi_1_dfm_6_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_11_lpi_1_dfm_5_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_12_lpi_1_dfm_6_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_12_lpi_1_dfm_5_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_13_lpi_1_dfm_6_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_13_lpi_1_dfm_5_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_14_lpi_1_dfm_6_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=============================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5702 in file
+		'./rtl/fir_core.v'.
+==================================================================================================================================
+|                             Register Name                              |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================================================================
+| MAC_16_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5713 in file
+		'./rtl/fir_core.v'.
+==================================================================================================================================
+|                             Register Name                              |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================================================================
+| MAC_15_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5724 in file
+		'./rtl/fir_core.v'.
+==================================================================================================================================
+|                             Register Name                              |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================================================================
+| MAC_14_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5735 in file
+		'./rtl/fir_core.v'.
+==================================================================================================================================
+|                             Register Name                              |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================================================================
+| MAC_13_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5746 in file
+		'./rtl/fir_core.v'.
+==================================================================================================================================
+|                             Register Name                              |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================================================================
+| MAC_12_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5757 in file
+		'./rtl/fir_core.v'.
+=================================================================================================================================
+|                             Register Name                             |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================================================================
+| MAC_3_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5768 in file
+		'./rtl/fir_core.v'.
+=================================================================================================================================
+|                             Register Name                             |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================================================================
+| MAC_1_ac_float_11_1_5_AC_TRN_operator_11_1_5_AC_TRN_acc_1_itm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5779 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_1_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5787 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_1_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5795 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_0_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5803 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_0_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5811 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_e_14_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5819 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_m_14_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5827 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_e_13_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5835 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_m_13_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5843 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_e_12_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5851 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_m_12_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5859 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_e_11_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5867 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_m_11_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5875 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_e_10_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5883 in file
+		'./rtl/fir_core.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| delay_lane_m_10_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5891 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_9_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5899 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_9_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5907 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_8_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5915 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_8_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5923 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_7_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5931 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_7_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5939 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_6_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5947 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_6_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5955 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_5_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5963 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_5_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5971 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_4_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5979 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_4_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5987 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_3_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 5995 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_3_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6003 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_e_2_sva_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6011 in file
+		'./rtl/fir_core.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| delay_lane_m_2_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6019 in file
+		'./rtl/fir_core.v'.
+===============================================================================================================================================
+|                                    Register Name                                    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_l_mux_12_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6036 in file
+		'./rtl/fir_core.v'.
+========================================================================================================================
+|                        Register Name                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================================================
+| operator_13_2_true_AC_TRN_AC_WRAP_rshift_psp_10_sva_10_7_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+========================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6076 in file
+		'./rtl/fir_core.v'.
+=============================================================================================================================================
+|                                   Register Name                                   |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_10_lpi_1_dfm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6091 in file
+		'./rtl/fir_core.v'.
+=============================================================================================================================================
+|                                   Register Name                                   |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_11_lpi_1_dfm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6106 in file
+		'./rtl/fir_core.v'.
+=============================================================================================================================================
+|                                   Register Name                                   |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_12_lpi_1_dfm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6121 in file
+		'./rtl/fir_core.v'.
+=============================================================================================================================================
+|                                   Register Name                                   |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_13_lpi_1_dfm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6136 in file
+		'./rtl/fir_core.v'.
+=============================================================================================================================================
+|                                   Register Name                                   |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_14_lpi_1_dfm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6151 in file
+		'./rtl/fir_core.v'.
+=============================================================================================================================================
+|                                   Register Name                                   |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_15_lpi_1_dfm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6166 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================
+|                                         Register Name                                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_1_sva_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6178 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================
+|                                         Register Name                                          |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_10_sva_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6188 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================
+|                                         Register Name                                          |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_11_sva_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6198 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================
+|                                         Register Name                                          |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_12_sva_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6208 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================
+|                                         Register Name                                          |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_13_sva_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6218 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================
+|                                         Register Name                                          |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_14_sva_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6228 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================================
+|                                         Register Name                                          |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_15_sva_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6238 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================================================
+|                                        Register Name                                        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_sva_reg | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6248 in file
+		'./rtl/fir_core.v'.
+===================================================================================================================================
+|                              Register Name                              |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_acc_psp_3_sva_reg | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6256 in file
+		'./rtl/fir_core.v'.
+==========================================================================================================================================
+|                                 Register Name                                  |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_qr_6_0_lpi_1_dfm_4_0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+==========================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6269 in file
+		'./rtl/fir_core.v'.
+=====================================================================================================
+|               Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================
+| MAC_ac_float_cctor_m_5_lpi_1_dfm_10_7_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6278 in file
+		'./rtl/fir_core.v'.
+====================================================================================================
+|              Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================================
+| MAC_ac_float_cctor_m_5_lpi_1_dfm_6_0_reg | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6288 in file
+		'./rtl/fir_core.v'.
+=====================================================================================================
+|               Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================
+|  MAC_ac_float_cctor_m_lpi_1_dfm_10_7_reg  | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_ac_float_cctor_m_6_lpi_1_dfm_10_7_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_ac_float_cctor_m_7_lpi_1_dfm_10_7_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_ac_float_cctor_m_8_lpi_1_dfm_10_7_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_ac_float_cctor_m_9_lpi_1_dfm_10_7_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6304 in file
+		'./rtl/fir_core.v'.
+====================================================================================================
+|              Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================================
+|  MAC_ac_float_cctor_m_lpi_1_dfm_6_0_reg  | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_ac_float_cctor_m_6_lpi_1_dfm_6_0_reg | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_ac_float_cctor_m_7_lpi_1_dfm_6_0_reg | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_ac_float_cctor_m_8_lpi_1_dfm_6_0_reg | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_ac_float_cctor_m_9_lpi_1_dfm_6_0_reg | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6325 in file
+		'./rtl/fir_core.v'.
+=====================================================================================================================================
+|                               Register Name                               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_op2_21_11_1_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6344 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================
+|                                         Register Name                                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_exponent_limited_2_sva_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6356 in file
+		'./rtl/fir_core.v'.
+=============================================================================================================================================================
+|                                           Register Name                                           |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_2_sva_2_1_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6366 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================================
+|                                         Register Name                                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_exponent_limited_4_sva_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6378 in file
+		'./rtl/fir_core.v'.
+======================================================================================================================================================================================================
+|                                                               Register Name                                                                |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nand_3_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                       ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_exponent_limited_5_sva_reg                        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                       ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_exponent_limited_6_sva_reg                        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                       ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_exponent_limited_7_sva_reg                        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                       ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_exponent_limited_8_sva_reg                        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                       ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_1_shift_exponent_limited_9_sva_reg                        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nand_8_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nand_7_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nand_6_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nand_5_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nand_4_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+======================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6440 in file
+		'./rtl/fir_core.v'.
+======================================================================================================================================
+|                               Register Name                                |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_op2_21_11_10_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+======================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6451 in file
+		'./rtl/fir_core.v'.
+======================================================================================================================================
+|                               Register Name                                |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_op2_21_11_11_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+======================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6462 in file
+		'./rtl/fir_core.v'.
+======================================================================================================================================
+|                               Register Name                                |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_op2_21_11_12_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+======================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6473 in file
+		'./rtl/fir_core.v'.
+======================================================================================================================================
+|                               Register Name                                |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_op2_21_11_13_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+======================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6484 in file
+		'./rtl/fir_core.v'.
+======================================================================================================================================
+|                               Register Name                                |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_op2_21_11_14_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+======================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6495 in file
+		'./rtl/fir_core.v'.
+======================================================================================================================================
+|                               Register Name                                |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_op2_21_11_15_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+======================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6506 in file
+		'./rtl/fir_core.v'.
+===================================================================================================================================
+|                              Register Name                              |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_op2_21_11_sva_reg | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6520 in file
+		'./rtl/fir_core.v'.
+======================================================================================================================================================================================================
+|                                                               Register Name                                                                |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_else_if_nand_2_itm_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+======================================================================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6531 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================
+|                         Register Name                         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================
+| result_assign_from_n16_15_13_2_AC_TRN_AC_WRAP_unequal_tmp_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6543 in file
+		'./rtl/fir_core.v'.
+=======================================================================================================================================
+|                                Register Name                                |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================================================================
+| result_plus_minus_11_1_5_AC_TRN_11_1_5_AC_TRN_op_lshift_mux_11_itm_3_0_reg  | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| result_plus_minus_11_1_5_AC_TRN_11_1_5_AC_TRN_op_lshift_mux_11_itm_10_7_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|  result_plus_minus_11_1_5_AC_TRN_11_1_5_AC_TRN_op_lshift_mux_11_itm_6_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| result_plus_minus_11_1_5_AC_TRN_11_1_5_AC_TRN_op_lshift_mux_11_itm_5_4_reg  | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+=======================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6660 in file
+		'./rtl/fir_core.v'.
+==================================================================================================
+|             Register Name              |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================================
+| ac_float_cctor_operator_return_sva_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+==================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6668 in file
+		'./rtl/fir_core.v'.
+====================================================================================================
+|              Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================================
+| ac_float_cctor_operator_return_9_sva_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+====================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6676 in file
+		'./rtl/fir_core.v'.
+=================================================================================================================================================
+|                                     Register Name                                     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================================================================================
+| result_assign_from_n16_15_13_2_AC_TRN_AC_WRAP_actual_max_shift_left_acc_psp_1_sva_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6688 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================
+|                                 Register Name                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_acc_psp_2_sva_rsp_0_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6698 in file
+		'./rtl/fir_core.v'.
+=========================================================================================================================================
+|                                 Register Name                                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================================================================
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_acc_psp_2_sva_rsp_2_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_acc_psp_2_sva_rsp_1_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=========================================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6718 in file
+		'./rtl/fir_core.v'.
+=============================================================================================================================
+|                           Register Name                           |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================================================
+| operator_13_2_true_AC_TRN_AC_WRAP_rshift_psp_10_sva_6_0_rsp_2_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| operator_13_2_true_AC_TRN_AC_WRAP_rshift_psp_10_sva_6_0_rsp_0_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| operator_13_2_true_AC_TRN_AC_WRAP_rshift_psp_10_sva_6_0_rsp_1_reg | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================================================
+
+Inferred memory devices in process
+	in routine fir_core line 6831 in file
+		'./rtl/fir_core.v'.
+====================================================================================================================================
+|                              Register Name                               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================================================================
+| result_plus_minus_11_1_5_AC_TRN_11_1_5_AC_TRN_add_r_12_1_1_sva_rsp_1_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| result_plus_minus_11_1_5_AC_TRN_11_1_5_AC_TRN_add_r_12_1_1_sva_rsp_0_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================================================================
+Presto compilation completed successfully. (fir_core)
+Elaborated 1 design.
+Current design is now 'fir_core'.
+Information: Building the design 'ccs_in_v1' instantiated from design 'fir_core' with
+	the parameters "rscid=1,width=11". (HDL-193)
+Presto compilation completed successfully. (ccs_in_v1_rscid1_width11)
+Information: Building the design 'ccs_in_v1' instantiated from design 'fir_core' with
+	the parameters "rscid=2,width=5". (HDL-193)
+Presto compilation completed successfully. (ccs_in_v1_rscid2_width5)
+Information: Building the design 'ccs_in_v1' instantiated from design 'fir_core' with
+	the parameters "rscid=3,width=176". (HDL-193)
+Presto compilation completed successfully. (ccs_in_v1_rscid3_width176)
+Information: Building the design 'ccs_in_v1' instantiated from design 'fir_core' with
+	the parameters "rscid=4,width=80". (HDL-193)
+Presto compilation completed successfully. (ccs_in_v1_rscid4_width80)
+Information: Building the design 'ccs_out_v1' instantiated from design 'fir_core' with
+	the parameters "rscid=5,width=11". (HDL-193)
+Presto compilation completed successfully. (ccs_out_v1_rscid5_width11)
+Information: Building the design 'ccs_out_v1' instantiated from design 'fir_core' with
+	the parameters "rscid=6,width=5". (HDL-193)
+Presto compilation completed successfully. (ccs_out_v1_rscid6_width5)
+Information: Building the design 'mgc_io_sync_v2' instantiated from design 'fir_core' with
+	the parameters "valid=0". (HDL-193)
+Presto compilation completed successfully. (mgc_io_sync_v2_valid0)
+Information: Building the design 'mgc_shift_l_v5' instantiated from design 'fir_core' with
+	the parameters "width_a=13,signd_a=0,width_s=4,width_z=13". (HDL-193)
+Presto compilation completed successfully. (mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13)
+Information: Building the design 'mgc_shift_r_v5' instantiated from design 'fir_core' with
+	the parameters "width_a=22,signd_a=1,width_s=4,width_z=22". (HDL-193)
+Warning:  ./rtl/fir_core.v:187: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:189: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully. (mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22)
+Information: Building the design 'mgc_shift_l_v5' instantiated from design 'fir_core' with
+	the parameters "width_a=22,signd_a=0,width_s=5,width_z=22". (HDL-193)
+Presto compilation completed successfully. (mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22)
+Information: Building the design 'mgc_shift_l_v5' instantiated from design 'fir_core' with
+	the parameters "width_a=22,signd_a=0,width_s=6,width_z=22". (HDL-193)
+Presto compilation completed successfully. (mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22)
+Information: Building the design 'mgc_shift_r_v5' instantiated from design 'fir_core' with
+	the parameters "width_a=12,signd_a=1,width_s=5,width_z=12". (HDL-193)
+Warning:  ./rtl/fir_core.v:187: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:189: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully. (mgc_shift_r_v5_width_a12_signd_a1_width_s5_width_z12)
+Information: Building the design 'leading_sign_13_1_1_0'. (HDL-193)
+
+Statistics for case statements in always block at line 273 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           285            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (leading_sign_13_1_1_0)
+Information: Building the design 'mgc_shift_br_v5' instantiated from design 'fir_core' with
+	the parameters "width_a=22,signd_a=1,width_s=5,width_z=22". (HDL-193)
+Warning:  ./rtl/fir_core.v:362: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/fir_core.v:364: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully. (mgc_shift_br_v5_width_a22_signd_a1_width_s5_width_z22)
+Information: Building the design 'fir_core_wait_dp'. (HDL-193)
+
+Inferred memory devices in process
+	in routine fir_core_wait_dp line 1050 in file
+		'./rtl/fir_core.v'.
+=====================================================================================================================
+|                       Register Name                       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================================
+| MAC_1_leading_sign_18_1_1_0_cmp_15_all_same_oreg_rneg_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_15_rtn_oreg_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|  MAC_1_leading_sign_18_1_1_0_cmp_all_same_oreg_rneg_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       MAC_1_leading_sign_18_1_1_0_cmp_rtn_oreg_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_1_all_same_oreg_rneg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_1_rtn_oreg_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_2_all_same_oreg_rneg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_2_rtn_oreg_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_3_all_same_oreg_rneg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_3_rtn_oreg_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_4_all_same_oreg_rneg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_4_rtn_oreg_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_5_all_same_oreg_rneg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_5_rtn_oreg_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_6_all_same_oreg_rneg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_6_rtn_oreg_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_7_all_same_oreg_rneg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_7_rtn_oreg_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_8_all_same_oreg_rneg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_8_rtn_oreg_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_9_all_same_oreg_rneg_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_9_rtn_oreg_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_10_all_same_oreg_rneg_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_10_rtn_oreg_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_11_all_same_oreg_rneg_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_11_rtn_oreg_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_12_all_same_oreg_rneg_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_12_rtn_oreg_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_13_all_same_oreg_rneg_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_13_rtn_oreg_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| MAC_1_leading_sign_18_1_1_0_cmp_14_all_same_oreg_rneg_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      MAC_1_leading_sign_18_1_1_0_cmp_14_rtn_oreg_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================================
+Presto compilation completed successfully. (fir_core_wait_dp)
+Information: Building the design 'fir_core_core_fsm'. (HDL-193)
+
+Statistics for case statements in always block at line 605 in file
+	'./rtl/fir_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           607            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine fir_core_core_fsm line 880 in file
+		'./rtl/fir_core.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    state_var_reg    | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (fir_core_core_fsm)
+1
+list_libs
+Logical Libraries:
+-------------------------------------------------------------------------
+Library		File			Path
+-------		----			----
+  saed32lvt_ss0p75v125c saed32lvt_ss0p75v125c.db /home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/DBs
+  gtech		gtech.db		/eda/synopsys/syn/T-2022.03-SP5-5/libraries/syn
+  standard.sldb	standard.sldb		/eda/synopsys/syn/T-2022.03-SP5-5/libraries/syn
+1
+list_designs
+ccs_in_v1_rscid1_width11
+ccs_in_v1_rscid2_width5
+ccs_in_v1_rscid3_width176
+ccs_in_v1_rscid4_width80
+ccs_out_v1_rscid5_width11
+ccs_out_v1_rscid6_width5
+fir_core (*)
+fir_core_core_fsm
+fir_core_wait_dp
+leading_sign_13_1_1_0
+mgc_io_sync_v2_valid0
+mgc_shift_br_v5_width_a22_signd_a1_width_s5_width_z22
+mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13
+mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22
+mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22
+mgc_shift_r_v5_width_a12_signd_a1_width_s5_width_z12
+mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22
+1
+source fir_core.con
+Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
+Using operating conditions 'ss0p75v125c' found in library 'saed32lvt_ss0p75v125c'.
+1
+compile_ultra
+Loading db file '/eda/synopsys/syn/T-2022.03-SP5-5/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/DBs/saed32lvt_ss0p75v125c.db"
+Library analysis succeeded.
+Information: linking reference library : /home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/CLIBs/saed32_lvt.ndm. (PSYN-878)
+Warning: Default routing directions were assigned to all the layers. (DCT-306)
+
+  Linking design 'fir_core'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (17 designs)              /home/ajh9498/Documents/SALSA_HLS/FIR/syn/setup/fir_core.db, etc
+  saed32lvt_ss0p75v125c (library) /home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/DBs/saed32lvt_ss0p75v125c.db
+  dw_foundation.sldb (library) /eda/synopsys/syn/T-2022.03-SP5-5/libraries/syn/dw_foundation.sldb
+
+Information: No preferred routing direction found for design layer M1. Using reference direction H. (DCT-035)
+Information: No preferred routing direction found for design layer M2. Using reference direction V. (DCT-035)
+Information: No preferred routing direction found for design layer M3. Using reference direction H. (DCT-035)
+Information: No preferred routing direction found for design layer M4. Using reference direction V. (DCT-035)
+Information: No preferred routing direction found for design layer M5. Using reference direction H. (DCT-035)
+Information: No preferred routing direction found for design layer M6. Using reference direction V. (DCT-035)
+Information: No preferred routing direction found for design layer M7. Using reference direction H. (DCT-035)
+Information: No preferred routing direction found for design layer M8. Using reference direction V. (DCT-035)
+Information: No preferred routing direction found for design layer M9. Using reference direction H. (DCT-035)
+Information: No preferred routing direction found for design layer MRDL. Using reference direction V. (DCT-035)
+
+TLU+ File = /home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/tech/saed32nm_1p9m_Cmax.tluplus
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | T-2022.03-DWBB_202203.4 |     *     |
+| Licensed DW Building Blocks        | T-2022.03-DWBB_202203.4 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT Topographical                                                 |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 9587                                   |
+| Number of User Hierarchies                              | 65                                     |
+| Sequential Cell Count                                   | 1405                                   |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 1                                      |
+| Number of Voltage Areas                                 | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 1026                                   |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 692 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 6 instances of design 'mgc_io_sync_v2_valid0'. (OPT-1056)
+Information: Uniquified 16 instances of design 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13'. (OPT-1056)
+Information: Uniquified 15 instances of design 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22'. (OPT-1056)
+Information: Uniquified 8 instances of design 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22'. (OPT-1056)
+Information: Uniquified 8 instances of design 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22'. (OPT-1056)
+Information: Uniquified 2 instances of design 'leading_sign_13_1_1_0'. (OPT-1056)
+  Simplifying Design 'fir_core'
+
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer M1 : 0.16 0.16 (RCEX-011)
+Information: Library Derived Res for layer M1 : 2e-06 2e-06 (RCEX-011)
+Information: Library Derived Cap for layer M2 : 0.17 0.17 (RCEX-011)
+Information: Library Derived Res for layer M2 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M3 : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer M3 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M4 : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer M4 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M5 : 0.094 0.094 (RCEX-011)
+Information: Library Derived Res for layer M5 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M6 : 0.094 0.094 (RCEX-011)
+Information: Library Derived Res for layer M6 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M7 : 0.092 0.092 (RCEX-011)
+Information: Library Derived Res for layer M7 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M8 : 0.092 0.092 (RCEX-011)
+Information: Library Derived Res for layer M8 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M9 : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer M9 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer MRDL : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer MRDL : 1.8e-07 1.8e-07 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.11 0.11 (RCEX-011)
+Information: Library Derived Horizontal Res : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.11 0.11 (RCEX-011)
+Information: Library Derived Vertical Res : 1.5e-06 1.5e-06 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 4.6e-07 4.6e-07 (RCEX-011)
+Loaded alib file '../alib-52/saed32lvt_ss0p75v125c.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy input_m_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy input_e_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy taps_m_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy taps_e_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy return_m_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy return_e_rsci before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy input_m_triosy_obj before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy MAC_1_leading_sign_13_1_1_0_rg before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy MAC_3_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy fir_core_core_fsm_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy return_e_triosy_obj before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy return_m_triosy_obj before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy taps_e_triosy_obj before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy taps_m_triosy_obj before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy input_e_triosy_obj before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy MAC_10_leading_sign_13_1_1_0_rg before Pass 1 (OPT-776)
+Information: Ungrouping 16 of 66 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'fir_core'
+Information: Added key list 'DesignWare' to design 'fir_core'. (DDB-72)
+ Implement Synthetic for 'fir_core'.
+  Processing 'fir_core_wait_dp'
+  Processing 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_0'
+ Implement Synthetic for 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_0'.
+Information: Added key list 'DesignWare' to design 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_0'. (DDB-72)
+  Processing 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_0'
+ Implement Synthetic for 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_0'.
+Information: Added key list 'DesignWare' to design 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_0'. (DDB-72)
+  Processing 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_0'
+ Implement Synthetic for 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_0'.
+Information: Added key list 'DesignWare' to design 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_0'. (DDB-72)
+  Processing 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_0'
+ Implement Synthetic for 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_0'.
+Information: Added key list 'DesignWare' to design 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_0'. (DDB-72)
+  Processing 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_15'
+ Implement Synthetic for 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_15'.
+Information: Added key list 'DesignWare' to design 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_15'. (DDB-72)
+  Processing 'mgc_shift_r_v5_width_a12_signd_a1_width_s5_width_z12'
+ Implement Synthetic for 'mgc_shift_r_v5_width_a12_signd_a1_width_s5_width_z12'.
+Information: Added key list 'DesignWare' to design 'mgc_shift_r_v5_width_a12_signd_a1_width_s5_width_z12'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'PMT3_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+Threshold voltage group cell usage:
+>> saed32cell_lvt 100.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Ungrouping hierarchy MAC_1_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_15' #insts = 32. (OPT-777)
+Information: Ungrouping hierarchy MAC_2_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_14' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_6_operator_13_2_true_AC_TRN_AC_WRAP_rshift_rg 'mgc_shift_r_v5_width_a12_signd_a1_width_s5_width_z12' #insts = 60. (OPT-777)
+Information: Ungrouping hierarchy fir_core_wait_dp_inst 'fir_core_wait_dp' #insts = 209. (OPT-777)
+Information: Ungrouping hierarchy MAC_5_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_5' #insts = 72. (OPT-777)
+Information: Ungrouping hierarchy MAC_5_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_4' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_2_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_13' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_16_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_0' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_15_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_1' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_14_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_2' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_13_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_3' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_12_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_4' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_11_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_5' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_10_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_6' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_9_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_7' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_8_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_8' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_7_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_9' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_6_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_10' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_5_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_11' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_4_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_12' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_3_operator_13_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a13_signd_a0_width_s4_width_z13_13' #insts = 36. (OPT-777)
+Information: Ungrouping hierarchy MAC_3_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_0' #insts = 72. (OPT-777)
+Information: Ungrouping hierarchy MAC_9_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_0' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_9_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_1' #insts = 72. (OPT-777)
+Information: Ungrouping hierarchy MAC_8_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_1' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_8_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_2' #insts = 72. (OPT-777)
+Information: Ungrouping hierarchy MAC_7_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_2' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_7_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_3' #insts = 72. (OPT-777)
+Information: Ungrouping hierarchy MAC_6_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_3' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_6_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_4' #insts = 72. (OPT-777)
+Information: Ungrouping hierarchy MAC_4_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_5' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_4_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_6' #insts = 72. (OPT-777)
+Information: Ungrouping hierarchy MAC_16_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_0' #insts = 70. (OPT-777)
+Information: Ungrouping hierarchy MAC_16_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_6' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_15_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_1' #insts = 70. (OPT-777)
+Information: Ungrouping hierarchy MAC_15_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_7' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_14_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_2' #insts = 70. (OPT-777)
+Information: Ungrouping hierarchy MAC_14_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_8' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_13_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_3' #insts = 70. (OPT-777)
+Information: Ungrouping hierarchy MAC_13_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_9' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_12_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_4' #insts = 70. (OPT-777)
+Information: Ungrouping hierarchy MAC_12_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_10' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_11_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_5' #insts = 70. (OPT-777)
+Information: Ungrouping hierarchy MAC_11_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_11' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_10_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_6' #insts = 70. (OPT-777)
+Information: Ungrouping hierarchy MAC_10_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_12' #insts = 43. (OPT-777)
+Information: Ungrouping hierarchy MAC_2_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s6_width_z22_7' #insts = 72. (OPT-777)
+Information: Ungrouping hierarchy MAC_1_operator_22_2_true_AC_TRN_AC_WRAP_lshift_rg 'mgc_shift_l_v5_width_a22_signd_a0_width_s5_width_z22_7' #insts = 70. (OPT-777)
+Information: Ungrouping hierarchy MAC_1_ac_float_cctor_assign_from_n32_31_22_2_AC_TRN_AC_WRAP_if_1_rshift_rg 'mgc_shift_r_v5_width_a22_signd_a1_width_s4_width_z22_14' #insts = 43. (OPT-777)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+
+Threshold voltage group cell usage:
+>> saed32cell_lvt 100.00%
+
+  Beginning Global Optimizations
+  ------------------------------
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Mapping 'fir_core_DW_mult_tc_49'
+
+Threshold voltage group cell usage:
+>> saed32cell_lvt 100.00%
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:16   58594.9      1.38     877.4    3172.8                           8779599872.0000
+    0:01:16   58592.6      1.37     876.0    3172.8                           8777806848.0000
+    0:01:16   58592.6      1.37     876.0    3172.8                           8777806848.0000
+    0:02:56   61528.8      1.07     783.2    3197.0                           8919849984.0000
+    0:02:56   61528.8      1.07     783.2    3197.0                           8919849984.0000
+    0:03:08   62656.2      0.94     706.1    1417.0                           9147725824.0000
+    0:03:08   62656.2      0.94     706.1    1417.0                           9147725824.0000
+    0:03:10   61954.0      0.94     706.7    1413.5                           9086734336.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_lvt 100.00%
+    0:03:30   61746.6      0.89     666.7     578.8                           9098588160.0000
+Loading db file '/home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/DBs/saed32lvt_ss0p75v125c.db'
+Warning: Design 'fir_core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1405 load(s), 1 driver(s)
+  Loading design 'fir_core'
+Warning: Design 'fir_core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: The library cell 'PMT3_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_LVT' in the library 'saed32lvt_ss0p75v125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer M1 : 0.16 0.16 (RCEX-011)
+Information: Library Derived Res for layer M1 : 2e-06 2e-06 (RCEX-011)
+Information: Library Derived Cap for layer M2 : 0.17 0.17 (RCEX-011)
+Information: Library Derived Res for layer M2 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M3 : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer M3 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M4 : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer M4 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M5 : 0.094 0.094 (RCEX-011)
+Information: Library Derived Res for layer M5 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M6 : 0.094 0.094 (RCEX-011)
+Information: Library Derived Res for layer M6 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M7 : 0.092 0.092 (RCEX-011)
+Information: Library Derived Res for layer M7 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M8 : 0.092 0.092 (RCEX-011)
+Information: Library Derived Res for layer M8 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M9 : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer M9 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer MRDL : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer MRDL : 1.8e-07 1.8e-07 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.11 0.11 (RCEX-011)
+Information: Library Derived Horizontal Res : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.11 0.11 (RCEX-011)
+Information: Library Derived Vertical Res : 1.5e-06 1.5e-06 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 4.6e-07 4.6e-07 (RCEX-011)
+
+Running Main Compile placer.
+Placing standard cells from scratch.
+...17%...33%...50%...67%...83%...100% done.
+Running Main Compile placer - done.
+
+
+ Collecting Buffer Trees ... Found 1209
+
+ Processing Buffer Trees ... 
+
+    [121]  10% ...
+    [242]  20% ...
+    [363]  30% ...
+    [484]  40% ...
+    [605]  50% ...
+    [726]  60% ...
+    [847]  70% ...
+    [968]  80% ...
+    [1089]  90% ...
+    [1209] 100% Done ...
+
+
+Information: Automatic high-fanout synthesis deletes 756 cells. (HFS-802)
+Information: Automatic high-fanout synthesis adds 471 new cells. (PSYN-864)
+
+
+Threshold voltage group cell usage:
+>> saed32cell_lvt 100.00%
+
+
+  Beginning Timing Optimizations
+  ------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:03:42   61153.1      1.23     900.1   29199.1                           9002103808.0000
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+    0:03:43   61152.1      1.23     900.1   29199.1                           9001324544.0000
+    0:03:47   59368.5      1.12     871.0   27691.3                           7640023040.0000
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ------------------------------------
+    0:03:51   60775.0      1.12     839.5     426.5                           8189114880.0000
+    0:03:51   60775.0      1.12     839.5     426.5                           8189114880.0000
+Info-lpmode: computing default table with library = lib8
+    0:03:51   60775.0      1.12     839.5     426.5                           8189114880.0000
+    0:03:54   60823.5      1.01     802.8     969.6                           8239335424.0000
+    0:03:54   60823.5      1.01     802.8     969.6                           8239335424.0000
+    0:04:04   61944.8      0.90     734.6    1159.1                           8525582336.0000
+    0:04:04   61944.8      0.90     734.6    1159.1                           8525582336.0000
+    0:04:06   61960.8      0.89     729.7    1202.6                           8549454848.0000
+    0:04:06   61960.8      0.89     729.7    1202.6                           8549454848.0000
+    0:04:25   62552.5      0.85     714.7    1533.1                           8792176640.0000
+    0:04:25   62552.5      0.85     714.7    1533.1                           8792176640.0000
+    0:04:26   62555.5      0.85     714.5    1533.1                           8792541184.0000
+    0:04:26   62555.5      0.85     714.5    1533.1                           8792541184.0000
+    0:04:28   62578.1      0.85     714.0    1545.1                           8802428928.0000
+    0:04:28   62578.1      0.85     714.0    1545.1                           8802428928.0000
+    0:04:29   62578.1      0.85     714.0    1545.1                           8802428928.0000
+    0:04:37   62777.1      0.84     698.0    1466.2                           8887666688.0000
+    0:04:42   62853.9      0.84     697.3    1473.6                           8907676672.0000
+    0:04:42   62853.9      0.84     697.3    1473.6                           8907676672.0000
+    0:04:46   61606.8      0.96     696.8    1320.6                           8670950400.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_lvt 100.00%
+
+
+  Beginning High Effort Optimization Phase
+  ----------------------------------------
+
+Threshold voltage group cell usage:
+>> saed32cell_lvt 100.00%
+
+
+  Beginning Timing Optimization
+  -----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:04:46   61606.8      0.96     696.8    1320.6                           8670950400.0000
+    0:04:46   61606.8      0.96     696.8    1320.6                           8670950400.0000
+    0:04:48   61400.4      0.96     690.7     471.2                           8775489536.0000
+    0:04:49   61400.4      0.96     690.7     471.2                           8775489536.0000
+    0:04:49   61399.9      0.94     690.6     484.8                           8775099392.0000
+    0:04:49   61399.9      0.94     690.6     484.8                           8775099392.0000
+    0:04:49   61436.5      0.86     687.4     572.0                           8780965888.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_lvt 100.00%
+
+
+  High Effort Optimization Phase Complete
+  ---------------------------------------
+
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+    0:04:51   61437.8      0.86     687.4     540.2                           8357930496.0000
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+
+Threshold voltage group cell usage:
+>> saed32cell_lvt 100.00%
+Loading db file '/home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/DBs/saed32lvt_ss0p75v125c.db'
+1
+report_area
+ 
+****************************************
+Report : area
+Design : fir_core
+Version: T-2022.03-SP5-5
+Date   : Tue May 13 01:06:15 2025
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'fir_core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    saed32lvt_ss0p75v125c (File: /home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/DBs/saed32lvt_ss0p75v125c.db)
+
+Number of ports:                          680
+Number of nets:                         23011
+Number of cells:                        21615
+Number of combinational cells:          20167
+Number of sequential cells:              1405
+Number of macros/black boxes:               0
+Number of buf/inv:                       4504
+Number of references:                      70
+
+Combinational area:              51712.204742
+Buf/Inv area:                     6990.484922
+Noncombinational area:            9725.582815
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 61437.787558
+Total area:                 undefined
+1
+report_power
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fir_core
+Version: T-2022.03-SP5-5
+Date   : Tue May 13 01:06:18 2025
+****************************************
+
+
+Library(s) Used:
+
+    saed32lvt_ss0p75v125c (File: /home/ajh9498/Documents/SALSA_HLS/FIR/syn/ref/DBs/saed32lvt_ss0p75v125c.db)
+
+
+Operating Conditions: ss0p75v125c   Library: saed32lvt_ss0p75v125c
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 0.75 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+Warning: Cannot report correlated power unless power prediction mode is set. (PWR-727)
+Power Breakdown
+---------------
+
+                             Cell        Driven Net  Tot Dynamic      Cell
+                             Internal    Switching   Power (uW)       Leakage
+Cell                         Power (uW)  Power (uW)  (% Cell/Tot)     Power (pW)
+--------------------------------------------------------------------------------
+Netlist Power                8.143e+03   1.551e+03   9.694e+03 (84%)  8.360e+09
+Estimated Clock Tree Power   N/A         N/A         N/A (N/A)        N/A
+--------------------------------------------------------------------------------
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  4.8363e+03            0.0000            0.0000        4.8363e+03  (  26.79%)  i
+register         686.8979           84.9535        2.1429e+09        2.9147e+03  (  16.14%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.6195e+03        1.4665e+03        6.2167e+09        1.0303e+04  (  57.07%)
+--------------------------------------------------------------------------------------------------
+Total          8.1427e+03 uW     1.5515e+03 uW     8.3596e+09 pW     1.8054e+04 uW
+1
+exit
+
+Memory usage for this session 566 Mbytes.
+Memory usage for this session including child processes 566 Mbytes.
+CPU usage for this session 356 seconds ( 0.10 hours ).
+Elapsed time for this session 372 seconds ( 0.10 hours ).
+
+Thank you...
