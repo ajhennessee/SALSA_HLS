@@ -1,3 +1,2 @@
-rm -rf Catapult_*
+rm -rf Catapult*
 rm catapult*
-rm -rf logs
