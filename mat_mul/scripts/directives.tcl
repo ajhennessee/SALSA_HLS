@@ -13,10 +13,10 @@ flow package require /SCVerify
 # eval $COMPILER_FLAGS
 
 # add the files you want
-# solution file add <tb_file>.cpp -type C++ -exclude true
 # solution file add <dut_file>.cpp -type C++
+# solution file add <tb_file>.cpp -type C++ -exclude true
 solution file add src/mat_mul.cpp -type C++
-solution file add src/mat_mul.h -type C++
+solution file add src/mat_mul.h -type C++ -exclude true
 
 # adjust this as needed, can be -mapped, -inline, -ccore, -top, -block
 # solution design set <top_module> -top
@@ -41,29 +41,15 @@ go libraries
 directive set -CLOCKS {clk {-CLOCK_PERIOD 1 -CLOCK_EDGE rising}}
 # -CLOCK_HIGH_TIME 0.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
 
-### 1 MAC ###
 go assembly
-directive set /matrix_multiply/core -DESIGN_GOAL Latency
-# directive set /top/core/for -PIPELINE_INIT_INTERVAL 1
-# directive set /fir/core/SHIFT -UNROLL yes
-# go allocate
 
-# ### 2 MAC ###
-# go assembly
-# directive set /fir/core/MAC -UNROLL 2
-# go allocate
+# define architecture / optimizations
+directive set /matrix_multiply/core -DESIGN_GOAL latency
 
-# ### 4 MAC ###
-# go assembly
-# directive set /fir/core/MAC -UNROLL 4
-# go allocate
+# schedule
+go schedule
 
-# ### 8 MAC ###
-# go assembly
-# directive set /fir/core/MAC -UNROLL 8
-# go allocate
+# # generate RTL
+# go extract
 
-# ### 16 MAC ###
-# go assembly
-# directive set /fir/core/MAC -UNROLL yes
-# go allocate
+project save
