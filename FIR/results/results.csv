@@ -1,0 +1,6 @@
+Taps, Type, Latency, Area
+16, float, 66, 69223.2
+32, float, 130, 134470.5
+64, float, 258, 283025.6
+16, complex_float, 70, 283058.7
+32, complex_float, 134, 568616.7

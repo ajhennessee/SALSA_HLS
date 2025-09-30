@@ -1,6 +1,7 @@
-#include "ac_int.h"
-#include "ac_float.h"
-#include "ac_complex.h"
+#include <ac_int.h>
+#include <ac_float.h>
+#include <ac_std_float.h>
+#include <ac_complex.h>
 
 /* 16-bit integer */
 typedef ac_int<16, true> my_int_t;
@@ -9,7 +10,8 @@ typedef ac_int<16, true> my_int_t;
 typedef ac_complex<my_int_t> my_complex_int_t;
 
 /* 16-bit float */
-typedef ac_float<11, 1, 5> my_float_t;
+// typedef ac_float<11, 1, 5> my_float_t;
+typedef ac_ieee_float<binary16> my_float_t;
 
 /* complex with 16-bit float components */
 struct my_complex_float_t {
