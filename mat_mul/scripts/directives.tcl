@@ -1,4 +1,4 @@
-solution options defaults
+# solution options defaults
 options set Output/OutputVHDL false
 options set Output/RTLSchem false
 options set Input/TargetPlatform x86_64
@@ -17,6 +17,8 @@ flow package require /SCVerify
 # solution file add <tb_file>.cpp -type C++ -exclude true
 solution file add src/mat_mul.cpp -type C++
 solution file add src/mat_mul.h -type C++ -exclude true
+solution file add src/types.h -type C++ -exclude true
+solution file add src/main.cpp -type C++ -exclude true
 
 # adjust this as needed, can be -mapped, -inline, -ccore, -top, -block
 # solution design set <top_module> -top
