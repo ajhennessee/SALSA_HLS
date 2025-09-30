@@ -1,8 +1,8 @@
 import os
 import subprocess
 
-taps_list = [16, 32, 64]
-types_list = ["float"]
+taps_list = [32]
+types_list = ["float", "complex_float"]
 type_macro_map = {
     "int": "my_int_t",
     "float": "my_float_t",
