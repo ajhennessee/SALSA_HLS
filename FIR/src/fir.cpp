@@ -13,9 +13,9 @@ type_t CCS_BLOCK(fir)(type_t input, type_t taps[NUM_TAPS]) {
 
     type_t result = (type_t)0;
     MAC: for (int i = 0; i < NUM_TAPS; i++) {
-        // result += (type_t) (delay_lane[i] * taps[i]); // for my_int_t
-        result.add(result, (type_t) (delay_lane[i] * taps[i])); // for my_float_t
-        // result = result + (type_t) (delay_lane[i] * taps[i]); // for my_complex_float_t
+        // result += (type_t)(delay_lane[i] * taps[i]); // for my_int_t
+        result.add(result, (type_t)(delay_lane[i] * taps[i])); // for my_float_t
+        // result = result + (type_t)(delay_lane[i] * taps[i]); // for my_complex_float_t
     }
 
     CCS_RETURN(result);
