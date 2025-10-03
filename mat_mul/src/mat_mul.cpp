@@ -1,6 +1,6 @@
 #include "mat_mul.h"
 
-void matrix_multiply(type_t A[Nd][Md], type_t B[Md][Pd], type_t C[Nd][Pd]) {
+void CCS_BLOCK(matrix_multiply)(type_t A[Nd][Md], type_t B[Md][Pd], type_t C[Nd][Pd]) {
     
     ROW: for (int i = 0; i < Nd; i++) {
         

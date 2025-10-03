@@ -1,4 +1,5 @@
 #include "types.h"
+#include <mc_scverify.h>
 
 #ifndef Nd
 #define Nd 1024 // Rows of A, Rows of C
@@ -14,4 +15,4 @@
 
 typedef my_float_t type_t;
 
-void matrix_multiply(type_t A[Nd][Md], type_t B[Md][Pd], type_t C[Nd][Pd]);
+void CCS_BLOCK(matrix_multiply)(type_t A[Nd][Md], type_t B[Md][Pd], type_t C[Nd][Pd]);
