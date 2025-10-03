@@ -3,7 +3,7 @@ import os
 with open("results.csv", "w") as csv_file:
     
     # header
-    csv_file.write("A_dim, B_dim, Type, Latency, Area\n")
+    csv_file.write("A_dim, B_dim, Type, Latency, Throughput, Area\n")
     
     # walk through directories and find report files
     for (root, dirs, files) in os.walk("."):
@@ -27,10 +27,13 @@ with open("results.csv", "w") as csv_file:
                         if "Design Total:" in line:
                             latency_cycles = line.strip().split(":")[1].strip().split()[1]
                             
+                        # extract throughput cycles
+                        if "Design Total:" in line:
+                            throughput_cycles = line.strip().split(":")[1].strip().split()[2]
+                            
                         # extract area (post-assignment)
                         if "Total Area Score:" in line:
                             area = line.strip().split(":")[1].strip().split()[-1]
-                        
-                    
+                          
                 # write results to csv
-                csv_file.write(f"{A_dim}, {B_dim}, {data_type}, {latency_cycles}, {area}\n")
+                csv_file.write(f"{A_dim}, {B_dim}, {data_type}, {latency_cycles}, {throughput_cycles}, {area}\n")
