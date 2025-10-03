@@ -1,0 +1,14 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+solution design set matrix_multiply -top (HC-8)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Creating project directory '/home/ajh9498/Documents/SALSA_HLS/mat_mul/mat_mul_1024x4_4x16_float/'. (PRJ-1)
+Front End called with arguments: -- /home/ajh9498/Documents/SALSA_HLS/mat_mul/src/mat_mul.cpp (CIN-69)
+Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+Pragma 'hls_design<>' detected on routine 'ac::fx_div<8>' (CIN-6)
+Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 5.59 seconds, memory usage 1440564kB, peak memory usage 1440564kB (SOL-9)

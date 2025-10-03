@@ -1,0 +1,257 @@
+## HLS DC synthesis script
+## Generated for stage extract
+
+# change the following to turn off/on timing reporting
+set enable_timing_reporting true
+set compile_seqmap_enable_output_inversion true
+set_host_options -max_cores 1
+
+puts "-- Note: Design Compiler Started"
+
+
+if {[regexp -all {[\s\$]} [file normalize [info script]]] != 0} {
+  puts "Error: Current working directory: \"[info script]\" contains non-standard characters. Please re-run from a different directory."
+  exit 2
+}
+
+set enable_page_mode "false"
+set timing_input_port_default_clock true
+
+if { [file isdirectory "gate_synthesis_dc"] } {
+  puts "Note: Removing old directory gate_synthesis_dc"
+  file delete -force -- "gate_synthesis_dc"
+}
+puts "Note: Creating directory gate_synthesis_dc"
+file mkdir "gate_synthesis_dc"
+cd "gate_synthesis_dc"
+
+set hdlin_while_loop_iterations 1000
+## Set the variable for file path prefixing 
+set RTL_TOOL_SCRIPT_DIR [file dirname [file normalize [info script]]]
+puts "-- RTL_TOOL_SCRIPT_DIR is set to '$RTL_TOOL_SCRIPT_DIR' "
+set MGC_HOME /eda/mentor/Siemens_EDA/Catapult_Synthesis_2023.1_2/Mgc_home
+
+## Initialize DC-HLS variables
+set hls_status 0
+
+proc run_cmd { cmd errstr } {
+  upvar hls_status hls_status
+  puts $cmd
+  set retVal {}
+  if { !$hls_status } {
+    if { [catch { set retVal [uplevel 1 [list eval $cmd] ] } ] } {
+      puts "Error: Unable to $errstr."
+      set hls_status 1
+    }
+  } else {
+    puts "Error: $errstr skipped due to previous errors."
+  }
+  set retVal
+}
+
+# Source custom DesignCompiler script for specified stage
+# stage is one of: initial analyze synthesis reports final terminate
+proc source_custom_script { stage } {
+   global env
+   if { [info exists env(DesignCompiler_CustomScriptDirPath)] } {
+      set dir_path $env(DesignCompiler_CustomScriptDirPath)
+      if { $dir_path ne "" } {
+         set script [file join $dir_path dc_${stage}.tcl]
+         if { [file exists $script] } {
+            set cmd "source $script"
+            set msg [list run custom script $script]
+            uplevel 1 [list run_cmd $cmd $msg]
+         }
+      }
+   }
+}
+
+proc get_slack { reportfile  } {
+  #Return WNS from qor report
+  set slack [expr {1e9}]
+  if {[grep_log "^  Design  WNS" $reportfile  slk]} {
+     if {$slk < $slack} {
+        set slack $slk
+     }
+  }
+  return $slack
+}
+
+proc grep_log {str log var} {
+# First unset return variable, if it exists
+    catch {uplevel 1 unset $var}
+    if {[catch {exec grep $str $log} rsl]} {
+       # No error, just don't set 'var' because calling code
+       # depends on whether var is set 
+       return false
+    }
+    # skip 15 spaces
+    set rsl [string range $rsl 15 end]
+    set rsl [string trim $rsl]
+    if {[llength $rsl] > 1} {
+       set rsl [lindex $rsl 0]
+    }
+    uplevel 1 set $var $rsl
+    return true
+}
+
+
+# Force error for bad link_library
+set_message_info -id UID-3 -stop_on
+
+# Force error for unmapped cells
+set_message_info -id RPT-7 -stop_on
+set_message_info -id LINT-61 -stop_on
+
+# Source potential custom script
+source_custom_script initial
+## Configure technology settings
+set target_library saed32lvt_tt0p78v125c.db
+set link_library {* saed32lvt_tt0p78v125c.db dw_foundation.sldb standard.sldb}
+set synthetic_library {dw_foundation.sldb standard.sldb}
+
+## Configure design license usage
+set synlib_dont_get_license {}
+set synlib_wait_for_design_license {}
+
+## Prepare netlist dependencies
+
+## Define library WORK
+if { [file isdirectory "work"] } {
+  file delete -force -- "work"
+}
+puts "Note: Creating directory work"
+file mkdir "work"
+define_design_lib "WORK" -path "work"
+puts "Note: Mapped design library WORK => work"
+run_cmd {analyze -format "verilog" $RTL_TOOL_SCRIPT_DIR/concat_rtl.v} {analyze file 'concat_rtl.v'}
+
+## Elaborate design matrix_multiply 
+run_cmd {elaborate "matrix_multiply"} {elaborate matrix_multiply {}}
+
+set_multi_vth_constraint -reset
+
+
+# Source potential custom script
+source_custom_script analyze
+
+# Use buffers instead of assignment statements in the Verilog netlist,
+# per Design Compiler Reference Methodology recommendations
+set_fix_multiple_port_nets -all -buffer_constants
+
+##  Synthesize toplevel design
+
+## Apply SDC constraints
+read_sdc $RTL_TOOL_SCRIPT_DIR/concat_rtl.v.dc.sdc -version 1.7
+
+puts "[clock format [clock seconds] -format {%a %b %d %H:%M:%S %Z %Y}]"
+
+
+# Source potential custom script
+source_custom_script synthesis
+
+set_multi_vth_constraint -reset
+puts "-- Starting synthesis for design 'matrix_multiply'"
+uniquify
+set wait_ctrl_inst [find -hierarchy cell {*_triosy_obj_inst *_synci_inst *_staller_inst *_rsci*_inst}]
+if { [llength $wait_ctrl_inst ] > 0 } {
+  ungroup $wait_ctrl_inst -flatten
+}
+list_libs
+if { [lindex [split $compatibility_version "-"] 1] < "2007.03" } {
+  compile_ultra      
+} else {
+  compile_ultra        
+}
+
+report_qor
+report_power
+report_power -hierarchy -levels 1
+report_wire_load
+# Source potential custom script
+source_custom_script reports
+
+# Will report failure if unmapped cells (since LINT-61 has been marked as a fatal error)
+check_design -unmapped -nosplit
+
+set high_fanout_net_threshold 0
+puts "-- Requested 3 fractional digits for design 'matrix_multiply' timing"
+puts "-- Requested 3 fractional digits for design 'matrix_multiply' capacitance"
+puts "-- Tool output delay factor to nS: 1.0"
+puts "-- ToolID: '${sh_product_version}'"
+puts "-- Characterization mode: p2p "
+
+puts "-- Primary IO Resource IDs: 'A_d_rsc_0_0 4 A_d_rsc_0_1 5 A_d_rsc_0_2 6 A_d_rsc_0_3 7 A_d_rsc_0_4 8 A_d_rsc_0_5 9 A_d_rsc_0_6 10 A_d_rsc_0_7 11 A_d_rsc_0_8 12 A_d_rsc_0_9 13 A_d_rsc_0_10 14 A_d_rsc_0_11 15 A_d_rsc_0_12 16 A_d_rsc_0_13 17 A_d_rsc_0_14 18 A_d_rsc_0_15 19 B_d_rsc_0_0 20 B_d_rsc_1_0 21 B_d_rsc_2_0 22 B_d_rsc_3_0 23 B_d_rsc_4_0 24 B_d_rsc_5_0 25 B_d_rsc_6_0 26 B_d_rsc_7_0 27 B_d_rsc_8_0 28 B_d_rsc_9_0 29 B_d_rsc_10_0 30 B_d_rsc_11_0 31 B_d_rsc_12_0 32 B_d_rsc_13_0 33 B_d_rsc_14_0 34 B_d_rsc_15_0 35 C_d_rsc 3 __MGC__CTRL__ 0'"
+
+puts "-- Synthesis area report for design 'matrix_multiply'"
+report_area -hierarchy -designware -nosplit
+puts "-- END Synthesis area report for design 'matrix_multiply'"
+
+if { $enable_timing_reporting } {
+   puts "Timing reporting started "
+   set clk_candidates {0 INOUT clk clk 4 IN A_d_rsc_0_0_q A_d_rsc_0_0_q 5 IN A_d_rsc_0_1_q A_d_rsc_0_1_q 6 IN A_d_rsc_0_2_q A_d_rsc_0_2_q 7 IN A_d_rsc_0_3_q A_d_rsc_0_3_q 8 IN A_d_rsc_0_4_q A_d_rsc_0_4_q 9 IN A_d_rsc_0_5_q A_d_rsc_0_5_q 10 IN A_d_rsc_0_6_q A_d_rsc_0_6_q 11 IN A_d_rsc_0_7_q A_d_rsc_0_7_q 12 IN A_d_rsc_0_8_q A_d_rsc_0_8_q 13 IN A_d_rsc_0_9_q A_d_rsc_0_9_q 14 IN A_d_rsc_0_10_q A_d_rsc_0_10_q 15 IN A_d_rsc_0_11_q A_d_rsc_0_11_q 16 IN A_d_rsc_0_12_q A_d_rsc_0_12_q 17 IN A_d_rsc_0_13_q A_d_rsc_0_13_q 18 IN A_d_rsc_0_14_q A_d_rsc_0_14_q 19 IN A_d_rsc_0_15_q A_d_rsc_0_15_q 20 IN B_d_rsc_0_0_q B_d_rsc_0_0_q 21 IN B_d_rsc_1_0_q B_d_rsc_1_0_q 22 IN B_d_rsc_2_0_q B_d_rsc_2_0_q 23 IN B_d_rsc_3_0_q B_d_rsc_3_0_q 24 IN B_d_rsc_4_0_q B_d_rsc_4_0_q 25 IN B_d_rsc_5_0_q B_d_rsc_5_0_q 26 IN B_d_rsc_6_0_q B_d_rsc_6_0_q 27 IN B_d_rsc_7_0_q B_d_rsc_7_0_q 28 IN B_d_rsc_8_0_q B_d_rsc_8_0_q 29 IN B_d_rsc_9_0_q B_d_rsc_9_0_q 30 IN B_d_rsc_10_0_q B_d_rsc_10_0_q 31 IN B_d_rsc_11_0_q B_d_rsc_11_0_q 32 IN B_d_rsc_12_0_q B_d_rsc_12_0_q 33 IN B_d_rsc_13_0_q B_d_rsc_13_0_q 34 IN B_d_rsc_14_0_q B_d_rsc_14_0_q 35 IN B_d_rsc_15_0_q B_d_rsc_15_0_q} 
+   set i_candidates {4 IN A_d_rsc_0_0_q A_d_rsc_0_0_q 5 IN A_d_rsc_0_1_q A_d_rsc_0_1_q 6 IN A_d_rsc_0_2_q A_d_rsc_0_2_q 7 IN A_d_rsc_0_3_q A_d_rsc_0_3_q 8 IN A_d_rsc_0_4_q A_d_rsc_0_4_q 9 IN A_d_rsc_0_5_q A_d_rsc_0_5_q 10 IN A_d_rsc_0_6_q A_d_rsc_0_6_q 11 IN A_d_rsc_0_7_q A_d_rsc_0_7_q 12 IN A_d_rsc_0_8_q A_d_rsc_0_8_q 13 IN A_d_rsc_0_9_q A_d_rsc_0_9_q 14 IN A_d_rsc_0_10_q A_d_rsc_0_10_q 15 IN A_d_rsc_0_11_q A_d_rsc_0_11_q 16 IN A_d_rsc_0_12_q A_d_rsc_0_12_q 17 IN A_d_rsc_0_13_q A_d_rsc_0_13_q 18 IN A_d_rsc_0_14_q A_d_rsc_0_14_q 19 IN A_d_rsc_0_15_q A_d_rsc_0_15_q 20 IN B_d_rsc_0_0_q B_d_rsc_0_0_q 21 IN B_d_rsc_1_0_q B_d_rsc_1_0_q 22 IN B_d_rsc_2_0_q B_d_rsc_2_0_q 23 IN B_d_rsc_3_0_q B_d_rsc_3_0_q 24 IN B_d_rsc_4_0_q B_d_rsc_4_0_q 25 IN B_d_rsc_5_0_q B_d_rsc_5_0_q 26 IN B_d_rsc_6_0_q B_d_rsc_6_0_q 27 IN B_d_rsc_7_0_q B_d_rsc_7_0_q 28 IN B_d_rsc_8_0_q B_d_rsc_8_0_q 29 IN B_d_rsc_9_0_q B_d_rsc_9_0_q 30 IN B_d_rsc_10_0_q B_d_rsc_10_0_q 31 IN B_d_rsc_11_0_q B_d_rsc_11_0_q 32 IN B_d_rsc_12_0_q B_d_rsc_12_0_q 33 IN B_d_rsc_13_0_q B_d_rsc_13_0_q 34 IN B_d_rsc_14_0_q B_d_rsc_14_0_q 35 IN B_d_rsc_15_0_q B_d_rsc_15_0_q} 
+   set o_candidates {4 IN A_d_rsc_0_0_re A_d_rsc_0_0_re 4 IN A_d_rsc_0_0_radr A_d_rsc_0_0_radr 5 IN A_d_rsc_0_1_re A_d_rsc_0_1_re 5 IN A_d_rsc_0_1_radr A_d_rsc_0_1_radr 6 IN A_d_rsc_0_2_re A_d_rsc_0_2_re 6 IN A_d_rsc_0_2_radr A_d_rsc_0_2_radr 7 IN A_d_rsc_0_3_re A_d_rsc_0_3_re 7 IN A_d_rsc_0_3_radr A_d_rsc_0_3_radr 8 IN A_d_rsc_0_4_re A_d_rsc_0_4_re 8 IN A_d_rsc_0_4_radr A_d_rsc_0_4_radr 9 IN A_d_rsc_0_5_re A_d_rsc_0_5_re 9 IN A_d_rsc_0_5_radr A_d_rsc_0_5_radr 10 IN A_d_rsc_0_6_re A_d_rsc_0_6_re 10 IN A_d_rsc_0_6_radr A_d_rsc_0_6_radr 11 IN A_d_rsc_0_7_re A_d_rsc_0_7_re 11 IN A_d_rsc_0_7_radr A_d_rsc_0_7_radr 12 IN A_d_rsc_0_8_re A_d_rsc_0_8_re 12 IN A_d_rsc_0_8_radr A_d_rsc_0_8_radr 13 IN A_d_rsc_0_9_re A_d_rsc_0_9_re 13 IN A_d_rsc_0_9_radr A_d_rsc_0_9_radr 14 IN A_d_rsc_0_10_re A_d_rsc_0_10_re 14 IN A_d_rsc_0_10_radr A_d_rsc_0_10_radr 15 IN A_d_rsc_0_11_re A_d_rsc_0_11_re 15 IN A_d_rsc_0_11_radr A_d_rsc_0_11_radr 16 IN A_d_rsc_0_12_re A_d_rsc_0_12_re 16 IN A_d_rsc_0_12_radr A_d_rsc_0_12_radr 17 IN A_d_rsc_0_13_re A_d_rsc_0_13_re 17 IN A_d_rsc_0_13_radr A_d_rsc_0_13_radr 18 IN A_d_rsc_0_14_re A_d_rsc_0_14_re 18 IN A_d_rsc_0_14_radr A_d_rsc_0_14_radr 19 IN A_d_rsc_0_15_re A_d_rsc_0_15_re 19 IN A_d_rsc_0_15_radr A_d_rsc_0_15_radr 20 IN B_d_rsc_0_0_re B_d_rsc_0_0_re 20 IN B_d_rsc_0_0_radr B_d_rsc_0_0_radr 21 IN B_d_rsc_1_0_re B_d_rsc_1_0_re 21 IN B_d_rsc_1_0_radr B_d_rsc_1_0_radr 22 IN B_d_rsc_2_0_re B_d_rsc_2_0_re 22 IN B_d_rsc_2_0_radr B_d_rsc_2_0_radr 23 IN B_d_rsc_3_0_re B_d_rsc_3_0_re 23 IN B_d_rsc_3_0_radr B_d_rsc_3_0_radr 24 IN B_d_rsc_4_0_re B_d_rsc_4_0_re 24 IN B_d_rsc_4_0_radr B_d_rsc_4_0_radr 25 IN B_d_rsc_5_0_re B_d_rsc_5_0_re 25 IN B_d_rsc_5_0_radr B_d_rsc_5_0_radr 26 IN B_d_rsc_6_0_re B_d_rsc_6_0_re 26 IN B_d_rsc_6_0_radr B_d_rsc_6_0_radr 27 IN B_d_rsc_7_0_re B_d_rsc_7_0_re 27 IN B_d_rsc_7_0_radr B_d_rsc_7_0_radr 28 IN B_d_rsc_8_0_re B_d_rsc_8_0_re 28 IN B_d_rsc_8_0_radr B_d_rsc_8_0_radr 29 IN B_d_rsc_9_0_re B_d_rsc_9_0_re 29 IN B_d_rsc_9_0_radr B_d_rsc_9_0_radr 30 IN B_d_rsc_10_0_re B_d_rsc_10_0_re 30 IN B_d_rsc_10_0_radr B_d_rsc_10_0_radr 31 IN B_d_rsc_11_0_re B_d_rsc_11_0_re 31 IN B_d_rsc_11_0_radr B_d_rsc_11_0_radr 32 IN B_d_rsc_12_0_re B_d_rsc_12_0_re 32 IN B_d_rsc_12_0_radr B_d_rsc_12_0_radr 33 IN B_d_rsc_13_0_re B_d_rsc_13_0_re 33 IN B_d_rsc_13_0_radr B_d_rsc_13_0_radr 34 IN B_d_rsc_14_0_re B_d_rsc_14_0_re 34 IN B_d_rsc_14_0_radr B_d_rsc_14_0_radr 35 IN B_d_rsc_15_0_re B_d_rsc_15_0_re 35 IN B_d_rsc_15_0_radr B_d_rsc_15_0_radr 3 OUT C_d_rsc_we C_d_rsc_we 3 OUT C_d_rsc_d C_d_rsc_d 3 OUT C_d_rsc_wadr C_d_rsc_wadr 4 IN A_d_tri_0_0_osy_lz A_d_tri_0_0_osy_lz 5 IN A_d_tri_0_1_osy_lz A_d_tri_0_1_osy_lz 6 IN A_d_tri_0_2_osy_lz A_d_tri_0_2_osy_lz 7 IN A_d_tri_0_3_osy_lz A_d_tri_0_3_osy_lz 8 IN A_d_tri_0_4_osy_lz A_d_tri_0_4_osy_lz 9 IN A_d_tri_0_5_osy_lz A_d_tri_0_5_osy_lz 10 IN A_d_tri_0_6_osy_lz A_d_tri_0_6_osy_lz 11 IN A_d_tri_0_7_osy_lz A_d_tri_0_7_osy_lz 12 IN A_d_tri_0_8_osy_lz A_d_tri_0_8_osy_lz 13 IN A_d_tri_0_9_osy_lz A_d_tri_0_9_osy_lz 14 IN A_d_tri_0_10_osy_lz A_d_tri_0_10_osy_lz 15 IN A_d_tri_0_11_osy_lz A_d_tri_0_11_osy_lz 16 IN A_d_tri_0_12_osy_lz A_d_tri_0_12_osy_lz 17 IN A_d_tri_0_13_osy_lz A_d_tri_0_13_osy_lz 18 IN A_d_tri_0_14_osy_lz A_d_tri_0_14_osy_lz 19 IN A_d_tri_0_15_osy_lz A_d_tri_0_15_osy_lz 20 IN B_d_tri_0_0_osy_lz B_d_tri_0_0_osy_lz 21 IN B_d_tri_1_0_osy_lz B_d_tri_1_0_osy_lz 22 IN B_d_tri_2_0_osy_lz B_d_tri_2_0_osy_lz 23 IN B_d_tri_3_0_osy_lz B_d_tri_3_0_osy_lz 24 IN B_d_tri_4_0_osy_lz B_d_tri_4_0_osy_lz 25 IN B_d_tri_5_0_osy_lz B_d_tri_5_0_osy_lz 26 IN B_d_tri_6_0_osy_lz B_d_tri_6_0_osy_lz 27 IN B_d_tri_7_0_osy_lz B_d_tri_7_0_osy_lz 28 IN B_d_tri_8_0_osy_lz B_d_tri_8_0_osy_lz 29 IN B_d_tri_9_0_osy_lz B_d_tri_9_0_osy_lz 30 IN B_d_tri_10_0_osy_lz B_d_tri_10_0_osy_lz 31 IN B_d_tri_11_0_osy_lz B_d_tri_11_0_osy_lz 32 IN B_d_tri_12_0_osy_lz B_d_tri_12_0_osy_lz 33 IN B_d_tri_13_0_osy_lz B_d_tri_13_0_osy_lz 34 IN B_d_tri_14_0_osy_lz B_d_tri_14_0_osy_lz 35 IN B_d_tri_15_0_osy_lz B_d_tri_15_0_osy_lz 3 OUT C_d_triosy_lz C_d_triosy_lz} 
+   foreach { orsid orsmode iclk ote } $clk_candidates {
+   puts "Timing reporting for orsid=$orsid orsmode=$orsmode iclk=$iclk ote=$ote "
+      foreach { irsid irsmode iport ite } $i_candidates {
+         if { [llength [get_clocks -quiet $iclk] ] > 0 && [llength [all_registers -clock $iclk ] ] > 0 } {
+            puts "-- Synthesis input_to_register:timing report for design 'matrix_multiply' '${irsid}' '${irsmode}' port '${ite}' '${orsid}' '${orsmode}' CLOCK '${ote}'"
+            report_timing -nosplit -significant_digits 3 -capacitance -from ${iport} -to [all_registers -data_pins -clock $iclk ] 
+            puts "-- END Synthesis input_to_register:timing report for design 'matrix_multiply' '${irsid}' '${irsmode}' port '${ite}' '${orsid}' '${orsmode}' CLOCK '${ote}'"
+         }
+      }
+   }
+   foreach { orsid orsmode oclk ote } $clk_candidates {
+      foreach { irsid irsmode iclk ite } $clk_candidates {
+         if { [llength [get_clocks -quiet ${iclk}] ] > 0 && [llength [get_clocks -quiet ${oclk}] ] > 0 && [llength [all_registers -clock ${iclk}] ] > 0 && [llength [all_registers -clock ${oclk}] ] > 0 } {
+            puts "-- Synthesis register_to_register:timing report for design 'matrix_multiply' '${irsid}' '${irsmode}' CLOCK '${ite}' '${orsid}' '${orsmode}' CLOCK '${ote}'"
+            report_timing -nosplit -significant_digits 3 -capacitance -from [all_registers -clock_pins -clock ${iclk}] -to [all_registers -data_pins -clock ${oclk}] 
+            puts "-- END Synthesis register_to_register:timing report for design 'matrix_multiply' '${irsid}' '${irsmode}' CLOCK '${ite}' '${orsid}' '${orsmode}' CLOCK '${ote}'"
+         }
+      }
+   }
+   foreach { orsid orsmode oport ote } $o_candidates {
+      foreach { irsid irsmode iclk ite } $clk_candidates {
+         if { [llength [get_clocks -quiet ${iclk}] ] > 0 && [llength [all_registers -clock ${iclk}] ] > 0 } {
+            puts "-- Synthesis register_to_output:timing report for design 'matrix_multiply' '${irsid}' '${irsmode}' CLOCK '${ite}' '${orsid}' '${orsmode}' port '${ote}'"
+            report_timing -nosplit -significant_digits 3 -capacitance -from [all_registers -clock_pins -clock ${iclk}] -to ${oport}
+            puts "-- END Synthesis register_to_output:timing report for design 'matrix_multiply' '${irsid}' '${irsmode}' CLOCK '${ite}' '${orsid}' '${orsmode}' port '${ote}'"
+         }
+      }
+   }
+   foreach { orsid orsmode oport ote } $o_candidates {
+      foreach { irsid irsmode iport ite } $i_candidates {
+         puts "-- Synthesis input_to_output:timing report for design 'matrix_multiply' '${irsid}' '${irsmode}' port '${ite}' '${orsid}' '${orsmode}' port '${ote}'"
+         report_timing -nosplit -significant_digits 3 -capacitance -from ${iport} -to ${oport}
+         puts "-- END Synthesis input_to_output:timing report for design 'matrix_multiply' '${irsid}' '${irsmode}' port '${ite}' '${orsid}' '${orsmode}' port '${ote}'"
+      }
+   }
+} else {
+   puts "Timing reporting turned off in the script "
+}
+if {$hls_status} {
+  puts "Warning: Check transcript for errors hls_status=$hls_status"
+}
+puts "[clock format [clock seconds] -format {%a %b %d %H:%M:%S %Z %Y}]"
+set dc_bin_fmt ddc
+if { [lindex [split $compatibility_version "-"] 1] < "2006.06" } {
+    set dc_bin_fmt db
+}
+write -hierarchy -format $dc_bin_fmt -output gate.dc.v.$dc_bin_fmt
+change_names -hierarchy -rules vhdl
+write -hierarchy -format vhdl -output /home/ajh9498/Documents/SALSA_HLS/mat_mul/mat_mul_1024x16_16x8_float/matrix_multiply.v1/./gate.dc.v.vhdl
+write_sdc /home/ajh9498/Documents/SALSA_HLS/mat_mul/mat_mul_1024x16_16x8_float/matrix_multiply.v1/./gate.dc.v.sdc
+write_sdf /home/ajh9498/Documents/SALSA_HLS/mat_mul/mat_mul_1024x16_16x8_float/matrix_multiply.v1/./gate.dc.v.sdf
+# Source potential custom script
+source_custom_script final
+
+cd ..
+
+puts "-- Synthesis finished for design 'matrix_multiply'"
+
+puts "-- Final RTL-to-Gate synthesis complete for 'matrix_multiply'"
+
+# Source potential custom script
+source_custom_script terminate
+

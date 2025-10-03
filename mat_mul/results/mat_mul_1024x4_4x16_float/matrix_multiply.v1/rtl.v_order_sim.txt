@@ -1,0 +1,6 @@
+/eda/mentor/Siemens_EDA/Catapult_Synthesis_2023.1_2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+/eda/mentor/Siemens_EDA/Catapult_Synthesis_2023.1_2/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+/eda/mentor/Siemens_EDA/Catapult_Synthesis_2023.1_2/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+../td_ccore_solutions/leading_sign_15_0_1_0_57210b0ad95c4fe954280875fe8f495c6134_0/rtl.v
+../td_ccore_solutions/leading_sign_11_0_4d0bb2ecabbe24067f655d7d939c3fe25abc_0/rtl.v
+./rtl.v
