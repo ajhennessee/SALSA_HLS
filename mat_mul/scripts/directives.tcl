@@ -1,4 +1,4 @@
-# solution options defaults
+solution options defaults
 options set Output/OutputVHDL false
 options set Output/RTLSchem false
 options set Input/TargetPlatform x86_64
@@ -11,6 +11,7 @@ flow package require /SCVerify
 # set what flags you want
 # set COMPILER_FLAGS "options set Input/CompilerFlags {-D<VARIABLE_NAME>=$<TARGET_ENV_VARIABLE>}"
 # eval $COMPILER_FLAGS
+# solution options set Input/CompilerFlags
 
 # add the files you want
 # solution file add <dut_file>.cpp -type C++
@@ -31,6 +32,7 @@ go compile
 solution library remove *
 solution library add saed32lvt_tt0p78v125c_beh -- -rtlsyntool DesignCompiler -vendor SAED32 -technology {lvt tt0p78v125c}
 solution library add saed32lvt_tt0p78v125c_dw_beh
+solution library add ccs_sample_mem
 
 # solution library remove *
 # solution library add nangate-45nm_beh -file {$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib} -- -rtlsyntool OasysRTL
@@ -47,6 +49,13 @@ go assembly
 
 # define architecture / optimizations
 directive set /matrix_multiply/core -DESIGN_GOAL latency
+
+directive set /matrix_multiply/core/MUL -UNROLL yes
+
+directive set /matrix_multiply/A.d:rsc -INTERLEAVE 4
+directive set /matrix_multiply/B.d:rsc -BLOCK_SIZE 8
+
+directive set /matrix_multiply/core/ROW -PIPELINE_INIT_INTERVAL 1
 
 # schedule
 go schedule
